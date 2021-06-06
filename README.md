@@ -35,7 +35,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 use state  : estado de un componnete u custom hook , tanto componente como custom hook pueden tener varios estados 
 useEffect : es un hook de dependencia de ejecuccion , y tambien hemos visto su return : limpieza de emissiones 
 useRef : referencia a un elemento html , 
-useCallback : memorizar version de un objeto funcion en una constante . y tambien React.memo : memorizar la ultima version de un componente , ye hemos visto la funcionalidad de ambos cama cada uno cumple al otro . useCallback y React.memo
+useCallback : memorizar version de un objeto funcion en una constante . y tambien React.memo : memorizar la ultima version de un componente , ye hemos visto la funcionalidad de ambos camo cada uno cumple al otro . useCallback y React.memo
 
 *helpers : utulizacion de una funccion que consta de un proceso pesado , en nuestro componente .
 
