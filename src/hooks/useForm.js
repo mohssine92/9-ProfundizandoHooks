@@ -8,23 +8,32 @@ import { useState } from "react"
   asi no tiene sentido escribir codigo para la accion de un formulario en la funccionComponente es rendundacia y codigo que realmente no de be estar alli esto es todo*/
 
 
-export const useForm = ( initialState = {} ) => {  // porue objeto vacio , no quiero que se revienta si no me manden nada la fucionComponente , si initialState es el objeto recibido del form .
+export const useForm = ( initialState = {} ) => {  //  objeto vacio , no quiero que se revienta si no me manden nada la fucionComponente , si initialState es el objeto recibido del form .
     
-   // podemos aplicar cualquier cantidad de logica qui , por ejemplo puede recibir otro argumento que sea reglas de validacion , campo obligatorios etc ..
+   // podemos aplicar cualquier cantidad de logica aqui , por ejemplo puede recibir otro argumento que sea reglas de validacion , campo obligatorios etc ..
 
     const [values, setValues] = useState(initialState);
 
-    const handleInputChange = ({ target }) => {
+    //resetear formulario
+    const reset = () =>{
+      setValues(initialState);
+      // porque se vacia asi ?, porque el objeto de estado recibido es vacio, a diferencia del estado de salida depende de la funcion procesada en este custom hook
+    }
 
+    const handleInputChange = ({ target }) => {
+        // console.log(targer.name, targer.value)
         setValues({
-            ...values,
-            [ target.name ]: target.value
+          ...values, /*...values para mantener las prop del form cuando se trata e recibir un objeto de estado de form con varias prop nombre , apellido , edad etc .. pero en el caso solo deseamos cambiar una prop , porque sino
+                       las salida va ser nuevo estadp obvio , asi no se mantienen se pierden    */           
+          [ target.name ]: target.value
         });
 
     }
 
-    return [ values, handleInputChange ];
+    return [ values, handleInputChange, reset ];
     // siempre tengo la posiblidad de elegir como quiero regresar la data como objeto , colleccion etc ...
+    /* tener claro lo que esta en la coleccion esta exportado al componente que va usar este hook , como es el caso de la funcion como es exportada se puede ejecutarla desde el componente : en este caso va modificar el estado entrante interamente y emita 
+       nueva salida nuevo esto */
 }
 
 

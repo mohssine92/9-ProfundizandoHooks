@@ -1,3 +1,5 @@
+
+//import './components/08-useReducer/intro-reducer';
 import React from 'react';                                                   /* Hook-app va ser como docuemntacion de los hooks */
 import ReactDOM from 'react-dom';
 
@@ -13,7 +15,11 @@ import ReactDOM from 'react-dom';
 //import { Memorize } from './components/06-memos/Memorize';
 //import { MemoHook } from './components/06-memos/MemoHook';
 //import { CallbackHook } from './components/06-memos/CallbackHook';
-import { Padre } from './components/07-tarea-memo/Padre';
+//import { Padre } from './components/07-tarea-memo/Padre';
+/* seccion:10 */
+import { TodoApp } from './components/08-useReducer/TodoApp';
+
+
 
 
 
@@ -27,8 +33,7 @@ import { Padre } from './components/07-tarea-memo/Padre';
 
 ReactDOM.render(
 
-  <Padre />, /* recordar esta app es como docs , cada vez quiero estudiar comportamiento de algun componenet o custom hook lo renderizo aqui  */
+  <TodoApp />, /* recordar esta app es como docs , cada vez quiero estudiar comportamiento de algun componenet o custom hook lo renderizo aqui  */
   document.getElementById('root')
 
 );
-
