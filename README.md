@@ -41,3 +41,7 @@ useCallback : memorizar version de un objeto funcion en una constante . y tambie
 
 *en general en esta seccion hemos concentrado como evitar varios componentes hijos o hooks perzonalizados o funciones helpers que no se ejecutan cuando el componente padre se reejecuta cada vez cambia un estado , y que se ejecuten estos 3 solo cuando relmente
 sera afectados segun dependencias .. 
+
+
+#Git hub : command
+ git log --oneline --all --graph --decorate

@@ -17,7 +17,10 @@ import ReactDOM from 'react-dom';
 //import { CallbackHook } from './components/06-memos/CallbackHook';
 //import { Padre } from './components/07-tarea-memo/Padre';
 /* seccion:10 */
-import { TodoApp } from './components/08-useReducer/TodoApp';
+//import { TodoApp } from './components/08-useReducer/TodoApp';
+/* seccion : 11 */
+import { MainApp } from './components/09-useContext/MainApp';
+
 
 
 
@@ -32,8 +35,9 @@ import { TodoApp } from './components/08-useReducer/TodoApp';
 
 
 ReactDOM.render(
-
-  <TodoApp />, /* recordar esta app es como docs , cada vez quiero estudiar comportamiento de algun componenet o custom hook lo renderizo aqui  */
+/* recordar esta app es como docs , cada vez quiero estudiar comportamiento de algun componenet o custom hook rederizo su componente  - asi tengo carpetas donde he implementado pequeñas aplicacion - que alfinal terminan cons
+   truyendo aplication de gran escala   */
+  <MainApp />, 
   document.getElementById('root')
 
 );
